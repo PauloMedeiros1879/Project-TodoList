@@ -7,7 +7,7 @@ function creatTask() {
   listTexts.className = 'tasks';
   listTexts.innerText = input.value;
   listOl.appendChild(listTexts);
-  input.value = ' ';
+  input.value = '';
 }
 buttonCreat.addEventListener('click', creatTask);
 
