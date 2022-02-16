@@ -11,15 +11,26 @@ function creatTask() {
 }
 buttonCreat.addEventListener('click', creatTask);
 
-function printColor() {
+function printColor() { 
   listOl.addEventListener('click', function(event){
     let tasks = document.querySelectorAll('.tasks')
 for(let i = 0; i < tasks.length; i += 1){
-      if(tasks[i].style.backgroundColor === 'gray'){
-        tasks[i].style.backgroundColor = 'white';
+      if(tasks[i].style.backgroundColor === 'gray'){ //mentoria se a tarefa for 'gray'
+        tasks[i].style.backgroundColor = 'white';// mentoria a tarefa sera pintada de 'white'
       }
-      event.target.style.backgroundColor = 'gray';
+      event.target.style.backgroundColor = 'gray';//mentoria quando clica em uma tarefa ela fica 'gray'
     }
   })
 }
 printColor();
+
+function taskFinished() {
+  listOl.addEventListener('dblclick', function(event){
+    if(event.target.classList.contains('complete')){
+      event.target.classList.remove('complete');
+    } else {
+      event.target.classList.add('complete');
+    }
+  })
+}
+taskFinished();
