@@ -43,3 +43,17 @@ function clearTasks() {
   })
 }
 clearTasks();
+
+function buttonRemoveTasksFinished() {
+  const print = querySelectorAll('.completed');
+  const buttonRemove = document.getElementById('remover-finalizados');
+  buttonRemove.addEventListener('click', function(){
+     const list = querySelectorAll('li');
+  for (let i = 0; i < list.length; i += 1) {
+    if (list[i].className) {
+      remove(print);
+    }
+  }
+  })
+}
+buttonRemoveTasksFinished()
