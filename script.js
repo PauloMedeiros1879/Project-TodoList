@@ -48,11 +48,9 @@ function buttonRemoveTasksFinished() {
   const buttonRemove = document.getElementById('remover-finalizados');
   buttonRemove.addEventListener('click', function(){
     const markTask = document.querySelectorAll('.completed');
-    if (markTask > 0){
-      for (let i = 0; i < markTask; i += 1){  
-        markTask[i].innerHTML = '';
+      for (let i = 0; i < markTask.length; i += 1){  
+        listOl.removeChild(markTask[i]);
       }
-    }
-  });
+    });
 }
 buttonRemoveTasksFinished();
