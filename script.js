@@ -34,3 +34,12 @@ function taskFinished() {
   })
 }
 taskFinished();
+
+function clearTasks() {
+  const buttonClean = document.getElementById('apaga-tudo');
+  buttonClean.addEventListener('click', function(){
+    const list = document.querySelector('ol');
+    list.innerHTML = ''; // Slack Explicação do aluno Felipe Avila.
+  })
+}
+clearTasks();
