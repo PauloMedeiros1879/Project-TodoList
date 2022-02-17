@@ -54,3 +54,14 @@ function buttonRemoveTasksFinished() {
     });
 }
 buttonRemoveTasksFinished();
+
+function buttonSaveTask(){
+  const buttonSave = document.getElementById('salvar-tarefas');
+  buttonSave,addEventListener('click', function(){
+    const olSave = document.querySelectorAll('ol');
+    if (olSave > 0){
+      localStorage.setItem('list', JSON.stringify(olSave));
+    }
+  })
+}
+buttonSaveTask();
