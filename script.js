@@ -73,7 +73,7 @@ function buttonMoveUp(){
     const firstElement = document.querySelectorAll('li')
     for (let i = 0; i < firstElement.length; i += 1){
       if (firstElement[i].style.backgroundColor === "gray"){
-      firstElement[i].parentNode.insertBefore(firstElement[i], firstElement[i].previousSibling)
+        firstElement[i].parentNode.insertBefore(firstElement[i], firstElement[i].previousSibling)
       }
     }
   })
@@ -96,8 +96,8 @@ buttonMoveDown();
 
 function removeSelected(){
   const removeTask = document.querySelector('#remover-selecionado');
-  const listTasks = document.querySelectorAll('li');
   removeTask.addEventListener('click', function(){
+    const listTasks = document.querySelectorAll('li');
     for (let i = 0; i < listTasks.length; i += 1) {
       if (listTasks[i].style.backgroundColor === 'gray'){
         listTasks[i].remove()
